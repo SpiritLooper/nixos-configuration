@@ -6,6 +6,8 @@
   imports =
     [ 
       ./hardware-configuration.nix    # Include the results of the hardware scan.
+      ./lib
+      ./machine-config.nix
       ./boot
       ./fixes
       ./system

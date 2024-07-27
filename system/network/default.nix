@@ -6,7 +6,7 @@
   ];
 
   config = {
-    networking.hostName = "hp-13x-spectre";
+    networking.hostName = config.machine.name;
     networking.enableIPv6 = false;
     
     # Add networkManager for Gnome integration

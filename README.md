@@ -25,5 +25,24 @@ Fixes :
 
 ## Installation
 
-> TODO: Write section
+1. Clone this repository in `/etc/nixos`
+```sh
+git clone git@github.com:SpiritLooper/nixos-configuration.git /etc/nixos
+```
 
+2. Put hostname configuration
+```sh
+echo "hostname" > /etc/nixos/static/hostname.txt
+```
+
+If this is a new machine, define a fix directory with hostname name
+```sh
+mkdir /etc/nixos/fixes/hostname
+echo "{ ... }: {}" > /etc/nixos/fixes/hostname/default.nix
+```
+
+3. Create configuration and configure your machine
+```sh
+cp /etc/nixos/machine-config-template.nix /etc/nixos/machine-config.nix
+vim /etc/nixos/machine-config.nix
+```

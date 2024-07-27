@@ -1,8 +1,8 @@
 # All users configuration
-{ pkgs, lib, ... }:
+{ config, pkgs, lib, ... }:
 {
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.spiritlooper = {
+  users.users."${config.machine.username}" = {
     isNormalUser = true;
     description = "Julien";
     extraGroups = [ "networkmanager" "wheel" "audio" ];

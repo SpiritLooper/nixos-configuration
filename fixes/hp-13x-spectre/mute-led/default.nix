@@ -5,7 +5,7 @@ in
 {
   security.sudo.extraRules= [
     {  
-      users = [ "spiritlooper" ];
+      users = [ config.machine.username ];
       commands = [
         { 
           command = "${pkgs.alsa-tools}/bin/hda-verb";

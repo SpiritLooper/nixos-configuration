@@ -1,1 +1,4 @@
 hardware-configuration.nix
+machine-config.nix
+
+static/
