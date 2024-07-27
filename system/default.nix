@@ -1,6 +1,7 @@
 { config, lib, options, pkgs, ... }:
 {
   imports = [
+    ./games
     ./kernel.nix
     ./network
     ./locales.nix
