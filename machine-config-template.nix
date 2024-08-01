@@ -4,6 +4,7 @@
     steam = false;
     emulator = {
       switch = false;
+      wii-gamecube = false;
       wii-u = false;
     };
   };
