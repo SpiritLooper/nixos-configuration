@@ -3,6 +3,7 @@
   config.game = {
     steam = false;
     emulator = {
+      nds = false;
       switch = false;
       wii-gamecube = false;
       wii-u = false;
