@@ -1,0 +1,6 @@
+{ ... }:
+{
+  imports = [
+    ./nswitch.nix
+  ];
+}
