@@ -5,6 +5,11 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
+  # Configure NIX_PATH
+  nix.nixPath = [
+    "nixpkgs-overlays=/etc/nixos/overlays" # Add overlays
+  ];
+
   # Fix Blurry Electro Apps
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
