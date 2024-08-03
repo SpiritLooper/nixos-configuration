@@ -7,7 +7,6 @@
     description = "Julien";
     extraGroups = [ "networkmanager" "wheel" "audio" ];
     packages = with pkgs; [
-      spotify
       discord
       alsa-tools
     ];

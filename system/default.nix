@@ -2,6 +2,7 @@
 {
   imports = [
     ./games
+    ./music
     ./kernel.nix
     ./network
     ./locales.nix
