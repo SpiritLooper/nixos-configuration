@@ -6,7 +6,7 @@
   nixpkgs.config.allowUnfree = true;
 
   # Configure NIX_PATH
-  nix.nixPath = [
+  nix.nixPath = options.nix.nixPath.default ++ [
     "nixpkgs-overlays=/etc/nixos/overlays" # Add overlays
   ];
 
