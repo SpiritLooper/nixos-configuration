@@ -4,6 +4,7 @@
     steam = false;
     emulator = {
       nds = false;
+      ps3 = true;
       switch = false;
       wii-gamecube = false;
       wii-u = false;
