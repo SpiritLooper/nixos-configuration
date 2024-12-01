@@ -8,7 +8,7 @@
     displayManager.gdm.enable = true;
     desktopManager.gnome = { 
       enable = true;
-      extraGSettingsOverridePackages = with pkgs.gnome; [ mutter ];
+      extraGSettingsOverridePackages = with pkgs; [ mutter ];
       extraGSettingsOverrides = ''
         [org.gnome.mutter]
         experimental-features=['variable-refresh-rate', 'scale-monitor-framebuffer']
@@ -16,7 +16,7 @@
     };
   };
 
-  environment.gnome.excludePackages = ( with pkgs.gnome; [
+  environment.gnome.excludePackages = ( with pkgs; [
     gnome-music
     gnome-terminal
     epiphany
@@ -32,8 +32,8 @@
   services.avahi.enable = false;
 
   # Disable trackers and gnome default stuff
-  services.gnome.tracker-miners.enable = false;
-  services.gnome.tracker.enable = false;
+  services.gnome.localsearch.enable = false;
+  services.gnome.tinysparql.enable = false;
 
   services.gnome.gnome-browser-connector.enable = false;
   services.gnome.gnome-initial-setup.enable = false;
