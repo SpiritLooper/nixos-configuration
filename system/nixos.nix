@@ -1,6 +1,9 @@
 # All NixOS configuration
 
 { config, lib, options, pkgs, ... }:
+let
+  default-overlay = import <nixpkgs-overlays>;
+in
 {
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -9,6 +12,8 @@
   nix.nixPath = options.nix.nixPath.default ++ [
     "nixpkgs-overlays=/etc/nixos/overlays" # Add overlays
   ];
+
+  nixpkgs.overlays = [ default-overlay ];
 
   # Fix Blurry Electro Apps
   environment.sessionVariables.NIXOS_OZONE_WL = "1";

@@ -11,4 +11,6 @@
     ./shell.nix
     ./users.nix
   ];
+
+  virtualisation.docker.enable = true;
 }

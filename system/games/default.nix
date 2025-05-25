@@ -1,12 +1,14 @@
 { lib, ... }: 
 {
   imports = [
+    ./lutris.nix
     ./steam.nix
     ./emulator
   ];
   
   options = {
     game = {
+      lutris = lib.mkEnableOption "Install and configure Lutris";
       steam = lib.mkEnableOption "Install and configure Steam Launcher";
       emulator = {
         nds = lib.mkEnableOption "Install and configure Nintendo DS Emulator";

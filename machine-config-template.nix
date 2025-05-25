@@ -1,6 +1,7 @@
 { config, lib, ... }:
 {
   config.game = {
+    lutris = false;
     steam = false;
     emulator = {
       nds = false;

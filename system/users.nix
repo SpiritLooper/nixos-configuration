@@ -5,10 +5,11 @@
   users.users."${config.machine.username}" = {
     isNormalUser = true;
     description = "Julien";
-    extraGroups = [ "networkmanager" "wheel" "audio" ];
+    extraGroups = [ "networkmanager" "wheel" "audio" "docker" ];
     packages = with pkgs; [
       discord
       alsa-tools
+      dig
     ];
   };
 }
