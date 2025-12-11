@@ -15,6 +15,8 @@ in
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
+  fonts.fontDir.enable = true;
+
   nixpkgs.overlays = [ default-overlay ];
 
   # Fix Blurry Electro Apps
@@ -27,16 +29,16 @@ in
 
   # This option defines the first version of NixOS you have installed on this particular machine,
   # and is used to maintain compatibility with application data (e.g. databases) created on older NixOS versions.
-  # 
+  #
   # Most users should **never** change this value after the initial install, for any reason,
   # even if you've upgraded your system to a new NixOS release.
-  # 
+  #
   # This value does **not** affect the Nixpkgs version your packages and OS are pulled from,
   # so changing it will **not** upgrade your system.
-  # 
+  #
   # This value being lower than the current NixOS release does **not** mean your system is
   # out of date, out of support, or vulnerable.
-  # 
+  #
   # Do **not** change this value unless you have manually inspected all the changes it would
   # make to your configuration, and migrated your data accordingly.
   # system.stateVersion = "XX.XX"; # Did you read the comment?
