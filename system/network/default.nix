@@ -12,7 +12,10 @@
     # Add networkManager for Gnome integration
     networking.networkmanager.enable = true;
 
-    # Install Tailscale
-    services.tailscale.enable = true;
+    # Install Netbird
+    services.netbird = {
+      enable = true;
+      ui.enable = true;
+    };
   };
 }

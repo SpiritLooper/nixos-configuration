@@ -3,17 +3,18 @@
 { config, lib, options, pkgs, ... }:
 {
   # Enable the GNOME Desktop Environment.
-  services.xserver = {
-    enable = true;
-    displayManager.gdm.enable = true;
-    desktopManager.gnome = { 
+  services.desktopManager.gnome = { 
       enable = true;
       extraGSettingsOverridePackages = with pkgs; [ mutter ];
       extraGSettingsOverrides = ''
         [org.gnome.mutter]
         experimental-features=['variable-refresh-rate', 'scale-monitor-framebuffer']
       '';
-    };
+  };
+  services.displayManager.gdm.enable = true;
+  services.xserver = {
+    enable = true;
+    
   };
 
   environment.gnome.excludePackages = ( with pkgs; [

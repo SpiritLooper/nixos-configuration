@@ -10,6 +10,7 @@
       discord
       alsa-tools
       dig
+      chromium
     ];
   };
 }

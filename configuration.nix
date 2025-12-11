@@ -13,5 +13,7 @@
       ./system
       ./desktop
     ];
+  
+  virtualisation.docker.enable = true;
 }
 

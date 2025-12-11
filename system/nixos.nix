@@ -13,6 +13,8 @@ in
     "nixpkgs-overlays=/etc/nixos/overlays" # Add overlays
   ];
 
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
   nixpkgs.overlays = [ default-overlay ];
 
   # Fix Blurry Electro Apps
