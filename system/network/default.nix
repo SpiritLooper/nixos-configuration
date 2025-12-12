@@ -15,7 +15,6 @@
     # Install Netbird
     services.netbird = {
       enable = true;
-      ui.enable = true;
     };
   };
 }
