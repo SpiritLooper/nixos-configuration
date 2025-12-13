@@ -1,4 +1,7 @@
 { lib, config, options, ... }:
+let 
+  netbird-latest = ( import <nixpkgs-unstable> {} ).netbird;
+in
 {
   imports = [
     ./certificates.nix
@@ -15,6 +18,7 @@
     # Install Netbird
     services.netbird = {
       enable = true;
+      package = netbird-latest;
     };
   };
 }
