@@ -1,7 +1,7 @@
 { lib, config, pkgs, options, ... }:
 let 
   netbird-latest = pkgs.netbird.overrideAttrs (oldAttrs: rec {
-    version = "0.60.9";
+    version = "0.61.0";
     src = pkgs.fetchFromGitHub {
       owner = "netbirdio";
       repo = "netbird";
